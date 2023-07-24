@@ -53,7 +53,7 @@ type Track struct {
 	Length     lavalink.Duration `json:"length"`
 	ID         string            `json:"identifier"`
 	IsStream   bool              `json:"isStream"`
-	URI        *string           `json:"uri"`
+	URI        string            `json:"uri"`
 	ArtworkURL *string           `json:"artworkUrl"`
 	ISRC       *string           `json:"isrc"`
 }
