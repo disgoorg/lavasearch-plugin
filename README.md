@@ -1,0 +1,1 @@
+# lavasearch-plugin
