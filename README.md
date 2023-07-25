@@ -5,7 +5,7 @@
 ## Installation
 
 ```shell
-$ go get github.com/disgoorg/disgo
+$ go get github.com/disgoorg/lavasearch-plugin
 ```
 
 ## Usage
@@ -31,4 +31,4 @@ Contributions are welcomed but for bigger changes we recommend first reaching ou
 
 ## License
 
-Distributed under the [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/disgoorg/disgo/blob/master/LICENSE). See LICENSE for more information.
+Distributed under the [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/disgoorg/lavasearch-plugin/blob/master/LICENSE). See LICENSE for more information.
