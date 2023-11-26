@@ -31,7 +31,7 @@ func LoadSearch(client disgolink.RestClient, query string, types []SearchType) (
 		return nil, err
 	}
 
-	if rs.StatusCode == http.StatusNotFound {
+	if rs.StatusCode == http.StatusNoContent {
 		return nil, ErrEmptySearchResult
 	} else if rs.StatusCode != http.StatusOK {
 		var lavalinkError lavalink.Error
