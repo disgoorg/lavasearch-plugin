@@ -23,6 +23,6 @@ type SearchResult struct {
 }
 
 type Text struct {
-	Text   string              `json:"text"`
-	Plugin lavalink.PluginInfo `json:"pluginInfo"`
+	Text   string           `json:"text"`
+	Plugin lavalink.RawData `json:"pluginInfo"`
 }
