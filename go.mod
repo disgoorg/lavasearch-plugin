@@ -3,7 +3,7 @@ module github.com/disgoorg/lavasearch-plugin
 go 1.21
 
 require (
-	github.com/disgoorg/disgolink/v3 v3.0.0-20231203111018-1106c2db18ac
+	github.com/disgoorg/disgolink/v3 v3.0.0
 	github.com/disgoorg/json v1.1.0
 )
 
