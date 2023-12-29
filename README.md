@@ -12,7 +12,7 @@ $ go get github.com/disgoorg/lavasearch-plugin
 
 ```go
 var client disgolink.Client
-result, err := lavasearch.LoadSearch(client.BestNode().Rest(), "dzsearch:test", []lavasearch.SearchType{lavasearch.SearchTypeAlbum, lavasearch.SearchTypePlaylist})
+result, err := lavasearch.LoadSearch(context.TODO(), client.BestNode().Rest(), "dzsearch:test", []lavasearch.SearchType{lavasearch.SearchTypeAlbum, lavasearch.SearchTypePlaylist})
 if err != nil {
     // handle error
 }
@@ -31,4 +31,4 @@ Contributions are welcomed but for bigger changes we recommend first reaching ou
 
 ## License
 
-Distributed under the [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/disgoorg/lavasearch-plugin/blob/master/LICENSE). See LICENSE for more information.
+Distributed under the [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE). See LICENSE for more information.

@@ -1,6 +1,7 @@
 package lavasearch
 
 import (
+	"context"
 	"errors"
 	"net/http"
 	"net/url"
@@ -15,14 +16,14 @@ var (
 )
 
 // LoadSearch loads a search result from Lavalink & returns a *SearchResult or ErrEmptySearchResult if no results were found or lavalink.Error if something went wrong with Lavalink or any other error.
-func LoadSearch(client disgolink.RestClient, query string, types []SearchType) (*SearchResult, error) {
+func LoadSearch(ctx context.Context, client disgolink.RestClient, query string, types []SearchType) (*SearchResult, error) {
 	values := url.Values{}
 	values.Set("query", query)
 	for _, t := range types {
 		values.Add("types", string(t))
 	}
 
-	rq, err := http.NewRequest(http.MethodGet, "/v4/loadsearch?"+values.Encode(), nil)
+	rq, err := http.NewRequestWithContext(ctx, http.MethodGet, "/v4/loadsearch?"+values.Encode(), nil)
 	if err != nil {
 		return nil, err
 	}
