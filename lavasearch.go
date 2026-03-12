@@ -16,7 +16,7 @@ var (
 )
 
 // LoadSearch loads a search result from Lavalink & returns a *SearchResult or ErrEmptySearchResult if no results were found or lavalink.Error if something went wrong with Lavalink or any other error.
-func LoadSearch(ctx context.Context, client disgolink.RestClient, query string, types []SearchType) (*SearchResult, error) {
+func LoadSearch(ctx context.Context, client *disgolink.RestClient, query string, types []SearchType) (*SearchResult, error) {
 	values := url.Values{}
 	values.Set("query", query)
 	for _, t := range types {
@@ -42,7 +42,9 @@ func LoadSearch(ctx context.Context, client disgolink.RestClient, query string, 
 		return nil, lavalinkError
 	}
 
-	defer rs.Body.Close()
+	defer func() {
+		_ = rs.Body.Close()
+	}()
 	var result SearchResult
 	if err = json.NewDecoder(rs.Body).Decode(&result); err != nil {
 		return nil, err
