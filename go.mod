@@ -1,14 +1,14 @@
 module github.com/disgoorg/lavasearch-plugin
 
-go 1.21
+go 1.25.0
 
 require (
-	github.com/disgoorg/disgolink/v3 v3.0.0
-	github.com/disgoorg/json v1.1.0
+	github.com/disgoorg/disgolink/v4 v4.0.0-20260312192103-c1eeff348743
+	github.com/disgoorg/json/v2 v2.0.0
 )
 
 require (
-	github.com/disgoorg/snowflake/v2 v2.0.1 // indirect
-	github.com/gorilla/websocket v1.5.1 // indirect
-	golang.org/x/net v0.19.0 // indirect
+	github.com/disgoorg/omit v1.0.0 // indirect
+	github.com/disgoorg/snowflake/v2 v2.0.3 // indirect
+	github.com/gorilla/websocket v1.5.3 // indirect
 )
